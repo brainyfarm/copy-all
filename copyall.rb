@@ -5,12 +5,15 @@ class Copyall < Formula
   sha256 "01d270a2c78df5b63b149e9dfb726ce0a4f660d8abec9f12a6f93a149111f8dd"
   license "MIT"
 
-  depends_on "bash"
-
   def install
     libexec.install Dir["src/*"]
 
-    (bin/"copyall").write_env_script libexec/"main.sh", PATH: "#{libexec}:$PATH"
+    (bin/"copyall").write <<~EOS
+      #!/bin/bash
+      # Wrapper to set up environment and execute main.sh from libexec
+      export PATH="#{libexec}:$PATH"
+      exec "#{libexec}/main.sh" "$@"
+    EOS
   end
 
   test do
