@@ -1,8 +1,8 @@
 class Copyall < Formula
   desc "CopyAll - A customizable file copying script"
   homepage "https://github.com/brainyfarm/homebrew-copyall"
-  url "https://github.com/brainyfarm/homebrew-copyall/releases/download/v0.3.0/copyall-0.3.0.tar.gz"
-  sha256 "01d270a2c78df5b63b149e9dfb726ce0a4f660d8abec9f12a6f93a149111f8dd"
+  url "https://github.com/brainyfarm/homebrew-copyall/releases/download/v0.3.1/copyall-0.3.1.tar.gz"
+  sha256 "5de910b7f15db14617bf7053ac4a044f836b121a882856c30ece7e32bd4a6de0"
   license "MIT"
 
   def install

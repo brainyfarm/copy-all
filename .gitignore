@@ -3,3 +3,4 @@ copyall/
 copyall.txt
 copyall.sh
 copyall
+*.tar.gz
