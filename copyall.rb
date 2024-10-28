@@ -10,7 +10,7 @@ class Copyall < Formula
 
     (bin/"copyall").write <<~EOS
       #!/bin/bash
-      # Wrapper to set up environment and execute main.sh from libexec
+      # Wrapper script to add libexec to PATH and execute main.sh
       export PATH="#{libexec}:$PATH"
       exec "#{libexec}/main.sh" "$@"
     EOS
